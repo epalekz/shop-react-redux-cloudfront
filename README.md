@@ -10,6 +10,10 @@ http://shop-react-redux-cloudfront-alekzse.s3-website-us-east-1.amazonaws.com/
 
 https://d1et1bzmhkby7q.cloudfront.net/
 
+link to serverless deployment:
+
+https://d1xartd2auar47.cloudfront.net/
+
 # React-shop-cloudfront
 
 This is frontend starter project for nodejs-aws mentoring program. It uses the following technologies:
