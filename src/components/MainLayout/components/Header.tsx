@@ -33,7 +33,7 @@ export default function Header() {
             underline="none"
             to="/"
           >
-            My Store! (my JS CC aws react)
+            My Store! (my JS CC aws react & backend API products)
           </Link>
         </Typography>
 
