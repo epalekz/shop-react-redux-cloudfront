@@ -34,7 +34,7 @@ export default function Header() {
             to="/"
           >
             My Store! (my JS CC aws react & backend API products & dynamo
-            database)
+            database!!)
           </Link>
         </Typography>
 
