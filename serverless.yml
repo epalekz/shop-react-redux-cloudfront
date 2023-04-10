@@ -1,11 +1,11 @@
-service: my-store-app
+service: my-store-app-2
 
 frameworkVersion: "3"
 
 provider:
   name: aws
   runtime: nodejs14.x
-  region: eu-west-1
+  region: us-east-1
   # setup profile for AWS CLI.
   # profile: node-aws
 
@@ -14,12 +14,12 @@ plugins:
   # 'serverless-single-page-app-plugin' is a custom plugin that located .serverless_plugins folder.
   # Existing plugin (https://www.npmjs.com/package/serverless-single-page-app-plugin) doesn't have invalidate cache feature that often used during CI/CD events.
   # How to build your own plugins: https://www.serverless.com/framework/docs/providers/aws/guide/plugins#service-local-plugin
-  - serverless-single-page-app-plugin
+  - ./.serverless_plugins/serverless-single-page-app-plugin
   - serverless-s3-cleaner
 
 custom:
   client:
-    bucketName: my-store-app
+    bucketName: my-store-app-2
     distributionFolder: dist
   s3BucketName: ${self:custom.client.bucketName}
 
@@ -30,6 +30,7 @@ custom:
       - ${self:custom.client.bucketName}
 
 resources:
+  Description: Frontend stack for My Shop app
   Resources:
     ## Specifying the S3 Bucket
     WebAppS3Bucket:
